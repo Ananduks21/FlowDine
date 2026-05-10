@@ -3,10 +3,10 @@ import { Button } from "../components/ui/button";
 import { ArrowRight, ArrowUpRight, ScanLine, Bell, Receipt, ChefHat, BarChart3, LayoutGrid, AlertTriangle, Zap, Clock, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const DASH = "https://customer-assets.emergentagent.com/job_order-sync-54/artifacts/mwz0jzms_ROS-Dashboard.jpeg";
-const ORDER = "https://customer-assets.emergentagent.com/job_order-sync-54/artifacts/cpq3h3ap_ROS-Order.jpeg";
-const PRODUCT = "https://customer-assets.emergentagent.com/job_order-sync-54/artifacts/r6iesk4t_ROS-Product.jpeg";
-const TABLE = "https://customer-assets.emergentagent.com/job_order-sync-54/artifacts/1kmyxwga_ROS-Table.jpeg";
+import DASH from "../assets/dashboard-preview.png";
+import ORDER from "../assets/order-preview.png";
+import PRODUCT from "../assets/product-preview.png";
+import TABLE from "../assets/table-preview.png";
 
 const Section = ({ children, className = "", id }) => (
   <section id={id} className={`max-w-7xl mx-auto px-5 lg:px-10 ${className}`}>{children}</section>
@@ -57,8 +57,42 @@ const Hero = ({ openModal }) => (
       <div className="lg:col-span-6 relative reveal">
         <div className="relative">
           <div className="absolute -inset-6 bg-gradient-to-tr from-[#0e4839]/10 via-transparent to-[#f59e0b]/15 rounded-[2rem] blur-2xl" />
-          <div className="relative rounded-[2rem] overflow-hidden border border-[#0e4839]/10 shadow-[0_40px_80px_-30px_rgba(8,41,31,0.35)] bg-white animate-float">
-            <img src={DASH} alt="FlowDine dashboard" className="w-full h-auto block" />
+          <div className="relative rounded-[2rem] overflow-hidden border border-[#0e4839]/10 shadow-[0_40px_80px_-30px_rgba(8,41,31,0.35)] bg-gradient-to-br from-[#eff7f0] via-[#ffffff] to-[#f7f3ea] animate-float">
+            <div className="relative h-[420px] p-8 flex flex-col gap-5">
+              <div className="flex items-center justify-between gap-4">
+                <div className="rounded-3xl bg-white/85 px-4 py-3 shadow-sm border border-[#0e4839]/10 w-full max-w-[45%]">
+                  <p className="text-xs uppercase tracking-[0.24em] text-[#0e4839]/70">Revenue</p>
+                  <p className="mt-3 text-3xl font-bold text-[#08291f]">₹84,212</p>
+                </div>
+                <div className="rounded-3xl bg-[#0e4839]/10 px-4 py-3 shadow-sm border border-[#0e4839]/15 w-full max-w-[45%]">
+                  <p className="text-xs uppercase tracking-[0.24em] text-[#0e4839]/80">Orders</p>
+                  <p className="mt-3 text-3xl font-bold text-[#08291f]">128</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4 flex-1">
+                <div className="rounded-[1.5rem] bg-white border border-[#0e4839]/10 p-5 shadow-sm">
+                  <p className="text-xs uppercase text-[#0e4839]/60 tracking-[0.24em]">Queue status</p>
+                  <div className="mt-5 bg-[#0e4839]/10 rounded-2xl p-4">
+                    <p className="text-lg font-semibold text-[#08291f]">3 orders in progress</p>
+                    <p className="text-sm text-[#2a3e36]/80 mt-2">Kitchen is running smoothly with live updates.</p>
+                  </div>
+                </div>
+                <div className="rounded-[1.5rem] bg-white border border-[#0e4839]/10 p-5 shadow-sm">
+                  <p className="text-xs uppercase text-[#0e4839]/60 tracking-[0.24em]">Table status</p>
+                  <div className="mt-5 flex flex-col gap-3">
+                    <span className="inline-flex items-center justify-between text-sm font-medium text-[#08291f]">
+                      <span>Table 4</span><span className="text-[#0e4839]">Preparing</span>
+                    </span>
+                    <span className="inline-flex items-center justify-between text-sm font-medium text-[#08291f]">
+                      <span>Table 7</span><span className="text-[#f59e0b]">Awaiting</span>
+                    </span>
+                    <span className="inline-flex items-center justify-between text-sm font-medium text-[#08291f]">
+                      <span>Table 12</span><span className="text-[#0e4839]">Served</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="hidden md:block absolute -bottom-8 -left-6 bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(8,41,31,0.25)] border border-[#0e4839]/10 p-4 animate-float-slow">
             <div className="flex items-center gap-3">
@@ -176,8 +210,14 @@ const Feature = ({ image, eyebrow, headline, description, points, reverse, accen
     <div className="lg:col-span-6 lg:[direction:ltr]">
       <div className="relative group">
         <div className={`absolute -inset-3 ${accent} rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition`} />
-        <div className="relative rounded-3xl overflow-hidden border border-[#0e4839]/10 shadow-[0_30px_60px_-25px_rgba(8,41,31,0.3)] bg-white">
-          <img src={image} alt={headline} className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500" />
+            <div className="relative rounded-3xl overflow-hidden border border-[#0e4839]/10 shadow-[0_30px_60px_-25px_rgba(8,41,31,0.3)] bg-white">
+          {image ? (
+            <img src={image} alt={headline} className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500" />
+          ) : (
+            <div className="w-full h-[360px] bg-[#f4f7f3] flex items-center justify-center text-[#0e4839]/70 text-sm font-medium">
+              Visual preview unavailable
+            </div>
+          )}
         </div>
       </div>
     </div>

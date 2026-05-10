@@ -61,7 +61,6 @@ export const Footer = () => {
             <Col heading="Company" items={[
               { to: "/about", label: "About" },
               { action: () => setOpen(true), label: "Contact" },
-              { to: "/careers", label: "Careers" },
             ]} />
           </div>
 

@@ -16,7 +16,6 @@ import BlogDetailPage from "./pages/BlogDetailPage";
 import AboutPage from "./pages/AboutPage";
 import SupportPage from "./pages/SupportPage";
 import LegalPage from "./pages/LegalPage";
-import CareersPage from "./pages/CareersPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/support" element={<SupportPage />} />
-            <Route path="/careers" element={<CareersPage />} />
             <Route path="/privacy-policy" element={<LegalPage />} />
             <Route path="/terms-of-service" element={<LegalPage />} />
             <Route path="/refund-policy" element={<LegalPage />} />

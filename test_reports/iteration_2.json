@@ -58,6 +58,6 @@
     "/support full submit shows success state ('Got it.' / 'respond shortly') and toast",
     "/support Issue Type Select dropdown opens with 5 options (Onboarding/Billing/Technical/Staff training/Other), selectable",
     "Existing routes (/, /pricing, /blog, /blog/:slug) still load",
-    "Invalid route → 404 page with 'Looks like that table doesn't exist'"
+    "Invalid route → 404 page with 'Looks like the page doesn't exist'"
   ]
 }

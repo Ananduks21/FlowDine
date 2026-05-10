@@ -7,7 +7,7 @@ import { useContactModal } from "../context/ContactModalContext";
 import { CheckCircle2, Loader2, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 
-const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_KEY = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
 
 export const ContactModal = () => {
   const { open, setOpen } = useContactModal();
@@ -25,6 +25,12 @@ export const ContactModal = () => {
       toast.error("Please fill in name, phone, and email.");
       return;
     }
+    if (!WEB3FORMS_KEY) {
+      toast.error("Web3Forms access key is not configured. Set REACT_APP_WEB3FORMS_ACCESS_KEY in your environment.");
+      setSubmitting(false);
+      return;
+    }
+
     setSubmitting(true);
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -33,12 +39,15 @@ export const ContactModal = () => {
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
           subject: `FlowDine demo request — ${form.restaurant || form.name}`,
-          from_name: "FlowDine Website",
-          ...form,
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          phone: form.phone,
+          restaurant: form.restaurant,
         }),
       });
       const data = await res.json();
-      if (data.success || res.ok) {
+      if (res.ok && data.success) {
         setSuccess(true);
         toast.success("Demo request sent! We'll be in touch within 24 hours.");
         setTimeout(() => {
@@ -47,14 +56,11 @@ export const ContactModal = () => {
           setForm({ name: "", phone: "", email: "", restaurant: "", message: "" });
         }, 2200);
       } else {
-        toast.success("Got it! We'll reach out shortly.");
-        setSuccess(true);
-        setTimeout(() => { setOpen(false); setSuccess(false); }, 2200);
+        const errorMessage = data.message || "Unable to submit form. Please try again later.";
+        toast.error(errorMessage);
       }
-    } catch {
-      toast.success("Got it! We'll reach out shortly.");
-      setSuccess(true);
-      setTimeout(() => { setOpen(false); setSuccess(false); }, 2200);
+    } catch (error) {
+      toast.error("Unable to submit form. Please check your network and try again.");
     } finally {
       setSubmitting(false);
     }
