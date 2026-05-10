@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { useContactModal } from "../context/ContactModalContext";
 
@@ -60,6 +60,14 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            data-testid="navbar-brochure-btn"
+            href="/FlowDine-Brochure.txt"
+            download="FlowDine-Brochure.txt"
+            className="hidden lg:inline-flex items-center gap-2 border border-[#0e4839]/20 hover:border-[#0e4839] hover:bg-[#0e4839]/5 text-[#08291f] rounded-full px-5 h-10 text-sm font-semibold transition-all"
+          >
+            <Download className="w-4 h-4" /> Brochure
+          </a>
           <Button
             data-testid="navbar-demo-btn"
             onClick={() => setOpen(true)}
@@ -95,10 +103,18 @@ export const Navbar = () => {
                 {l.label}
               </NavLink>
             ))}
+            <a
+              data-testid="mobile-brochure-btn"
+              href="/FlowDine-Brochure.txt"
+              download="FlowDine-Brochure.txt"
+              className="mt-2 inline-flex items-center justify-center gap-2 border border-[#0e4839]/25 text-[#08291f] rounded-full h-12 font-semibold"
+            >
+              <Download className="w-4 h-4" /> Download Brochure
+            </a>
             <Button
               data-testid="mobile-demo-btn"
               onClick={() => setOpen(true)}
-              className="mt-2 bg-[#0e4839] hover:bg-[#08291f] text-[#faf8f3] rounded-full h-12 font-semibold"
+              className="bg-[#0e4839] hover:bg-[#08291f] text-[#faf8f3] rounded-full h-12 font-semibold"
             >
               Get Demo
             </Button>

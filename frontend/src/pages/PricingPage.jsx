@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Check, Sparkles, ArrowRight } from "lucide-react";
+import { Check, Sparkles, ArrowRight, HelpCircle } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Switch } from "../components/ui/switch";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion";
 import { useContactModal } from "../context/ContactModalContext";
 
 const tiers = [
@@ -134,12 +135,81 @@ const PricingPage = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-[#faf8f3] border border-[#0e4839]/10 rounded-3xl p-10 lg:p-14 text-center">
-          <h3 className="font-display text-3xl lg:text-4xl font-bold text-[#08291f]">Running a chain or franchise?</h3>
-          <p className="mt-4 text-[#2a3e36]/80 max-w-xl mx-auto">We have custom plans for multi-outlet groups with consolidated dashboards and central kitchen support.</p>
-          <Button data-testid="enterprise-cta" onClick={() => setOpen(true)} className="mt-7 bg-[#0e4839] hover:bg-[#08291f] text-[#faf8f3] rounded-full px-7 h-12 font-semibold">
-            Talk to sales →
-          </Button>
+        {/* FAQ */}
+        <div data-testid="pricing-faq" className="mt-24 grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0e4839]/8 text-[#0e4839] text-xs font-mono uppercase tracking-wider">
+              <HelpCircle className="w-3 h-3" /> FAQ
+            </span>
+            <h2 className="mt-5 font-display text-4xl lg:text-5xl font-bold text-[#08291f] leading-tight">Questions, answered.</h2>
+            <p className="mt-5 text-[#2a3e36]/80">Still unsure? Drop us a message — we reply within 24 hours.</p>
+            <Button data-testid="faq-contact-btn" onClick={() => setOpen(true)} className="mt-6 bg-[#0e4839] hover:bg-[#08291f] text-[#faf8f3] rounded-full px-6 h-11 font-semibold">
+              Talk to us →
+            </Button>
+          </div>
+          <div className="lg:col-span-8">
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                {
+                  q: "Is there a setup fee or contract lock-in?",
+                  a: "No setup fees and no lock-in. You pay month to month and can cancel anytime. Annual plans get a 20% discount but are still cancellable mid-cycle (we refund unused months pro-rata).",
+                },
+                {
+                  q: "How long does onboarding take?",
+                  a: "Most restaurants are live within 48 hours. We import your menu, configure tables, train your staff over a 60-minute video session, and stay on standby for the first weekend.",
+                },
+                {
+                  q: "Does FlowDine work without internet?",
+                  a: "Yes. The waiter and kitchen apps queue orders locally and sync the moment connectivity returns. You will never lose an order to a network drop.",
+                },
+                {
+                  q: "Which payment methods are supported?",
+                  a: "All Indian payment methods — UPI (any app), cash, debit/credit cards via your existing payment gateway, and split payments combining any of the above on a single bill.",
+                },
+                {
+                  q: "Can I switch plans later?",
+                  a: "Anytime. Upgrade with a single click — billing pro-rates automatically. Downgrades take effect at the next billing cycle.",
+                },
+                {
+                  q: "Do you support multiple outlets?",
+                  a: "Yes, on the Max plan and above. You get a consolidated dashboard across all outlets with role-based access for managers and central-kitchen support.",
+                },
+                {
+                  q: "What hardware do I need?",
+                  a: "Any Android tablet or phone for waiters and kitchen, plus a thermal printer for KOT. We can recommend exact models or include pre-configured hardware as an add-on.",
+                },
+                {
+                  q: "Is my data safe?",
+                  a: "Your data is encrypted in transit and at rest, hosted on Indian data centres, and exportable as CSV at any time. We never share or sell customer data.",
+                },
+              ].map((item, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  data-testid={`faq-item-${i}`}
+                  className="bg-white border border-[#0e4839]/10 rounded-2xl px-6 data-[state=open]:border-[#0e4839]/30 data-[state=open]:shadow-[0_15px_30px_-15px_rgba(8,41,31,0.15)] transition-all"
+                >
+                  <AccordionTrigger className="font-display text-base lg:text-lg font-semibold text-[#08291f] py-5 hover:no-underline text-left">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[#2a3e36]/85 text-base leading-relaxed pb-5">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+
+        <div className="mt-24 bg-[#08291f] rounded-3xl p-10 lg:p-14 text-center relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#f59e0b]/15 rounded-full blur-3xl" />
+          <div className="relative">
+            <h3 className="font-display text-3xl lg:text-4xl font-bold text-[#faf8f3]">Running a chain or franchise?</h3>
+            <p className="mt-4 text-[#e9e3d2]/85 max-w-xl mx-auto">We have custom plans for multi-outlet groups with consolidated dashboards and central kitchen support.</p>
+            <Button data-testid="enterprise-cta" onClick={() => setOpen(true)} className="mt-7 bg-[#f59e0b] hover:bg-[#fbbf24] text-[#08291f] rounded-full px-7 h-12 font-semibold">
+              Talk to sales →
+            </Button>
+          </div>
         </div>
       </div>
     </main>

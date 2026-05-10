@@ -1,0 +1,65 @@
+FlowDine — Restaurant Operating System
+=========================================
+
+ONE SYSTEM. COMPLETE CONTROL.
+
+FlowDine connects every part of your restaurant — orders, kitchen, billing,
+tables, and staff — in real time. Built for restaurants that don't have
+time for chaos.
+
+──────────────────────────────────────────
+WHAT'S INSIDE
+──────────────────────────────────────────
+
+• QR-based ordering (customer self-order)
+• Real-time order management
+• KOT (Kitchen Order Ticket) system
+• Billing & split payments (cash + UPI + card)
+• Live table management with floor plan
+• Waiter call & bill request
+• Menu management with add-ons & portions
+• Staff management with roles & attendance
+• Reservations & token system
+• Live analytics dashboard
+
+──────────────────────────────────────────
+RESULTS FROM REAL RESTAURANTS
+──────────────────────────────────────────
+
+• 25% increase in table turnover during peak
+• Order-to-kitchen time under 10 seconds
+• Billing disputes drop from 4% to under 0.5%
+• 8–15% increase in tips for service staff
+• Onboard a new waiter in 30 minutes
+
+──────────────────────────────────────────
+PRICING
+──────────────────────────────────────────
+
+BASE — ₹999/month
+  QR ordering · order management · basic billing
+  Up to 10 tables · email support
+
+CORE — ₹1,999/month  (Most Popular)
+  Everything in Base
+  + KOT · table management · staff management
+  + Split payments (UPI + cash)
+  Up to 30 tables
+
+MAX — ₹2,999/month
+  Everything in Core
+  + Live analytics · reservations · token system
+  + Priority 24/7 support
+  Unlimited tables · multi-outlet ready
+
+Annual plans save 20%.
+
+──────────────────────────────────────────
+BOOK A 15-MINUTE DEMO
+──────────────────────────────────────────
+
+Visit: flowdine.app
+Email: hello@flowdine.app
+
+This is not just software.
+This is how restaurants run.

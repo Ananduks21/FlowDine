@@ -291,27 +291,37 @@ const HowItWorks = () => {
   );
 };
 
-// 7. PRODUCT GRID
+// 7. ONE PLATFORM (single image)
 const ProductGrid = () => (
   <Section className="py-24 lg:py-32">
     <div className="text-center max-w-2xl mx-auto mb-14">
-      <Pill>Multi-image showcase</Pill>
+      <Pill>One platform</Pill>
       <h2 className="mt-5 font-display text-4xl lg:text-5xl font-bold text-[#08291f] leading-tight">One Platform. Full Control.</h2>
+      <p className="mt-5 text-lg text-[#2a3e36]/80">From the floor to the kitchen to the bill — everything you run, in one place.</p>
     </div>
-    <div className="grid md:grid-cols-2 gap-6">
-      {[
-        { src: DASH, label: "Dashboard" },
-        { src: TABLE, label: "Tables" },
-        { src: ORDER, label: "Billing" },
-        { src: PRODUCT, label: "Menu" },
-      ].map((item, i) => (
-        <div key={i} className="group relative rounded-3xl overflow-hidden border border-[#0e4839]/10 bg-white shadow-[0_20px_50px_-25px_rgba(8,41,31,0.25)] hover:shadow-[0_30px_70px_-25px_rgba(8,41,31,0.4)] transition-all duration-500">
-          <img src={item.src} alt={item.label} className="w-full h-auto block group-hover:scale-[1.03] transition-transform duration-700" />
-          <div className="absolute top-5 left-5">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#08291f] text-[#f59e0b] text-xs font-mono uppercase">{item.label}</span>
+    <div className="relative group">
+      <div className="absolute -inset-6 bg-gradient-to-tr from-[#0e4839]/15 via-[#f59e0b]/15 to-[#0e4839]/10 rounded-[2.5rem] blur-2xl opacity-70 group-hover:opacity-100 transition" />
+      <div className="relative rounded-[2.5rem] overflow-hidden border border-[#0e4839]/10 shadow-[0_40px_80px_-30px_rgba(8,41,31,0.35)]">
+        <img
+          src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=2000&q=85"
+          alt="FlowDine — one platform, full control"
+          className="w-full h-[320px] sm:h-[460px] lg:h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08291f]/80 via-[#08291f]/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f59e0b] text-[#08291f] text-xs font-mono uppercase tracking-wider font-bold mb-4">All-in-one</span>
+              <h3 className="font-display text-3xl lg:text-5xl font-bold text-[#faf8f3] leading-[1.1]">From scan to settle.<br />One unified system.</h3>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {["QR Ordering", "Live Tables", "KOT", "Billing", "Analytics"].map(t => (
+                <span key={t} className="px-4 py-2 rounded-full bg-[#faf8f3]/15 backdrop-blur-md border border-[#faf8f3]/20 text-[#faf8f3] text-xs font-mono uppercase tracking-wider">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
-      ))}
+      </div>
     </div>
   </Section>
 );
