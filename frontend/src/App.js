@@ -9,9 +9,14 @@ import ScrollToTop from "./components/ScrollToTop";
 import { ContactModalProvider } from "./context/ContactModalContext";
 
 import HomePage from "./pages/HomePage";
+import FeaturesPage from "./pages/FeaturesPage";
 import PricingPage from "./pages/PricingPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import AboutPage from "./pages/AboutPage";
+import SupportPage from "./pages/SupportPage";
+import LegalPage from "./pages/LegalPage";
+import CareersPage from "./pages/CareersPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -23,9 +28,17 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/features" element={<FeaturesPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/support" element={<SupportPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/privacy-policy" element={<LegalPage />} />
+            <Route path="/terms-of-service" element={<LegalPage />} />
+            <Route path="/refund-policy" element={<LegalPage />} />
+            <Route path="/cookie-policy" element={<LegalPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
@@ -33,12 +46,7 @@ function App() {
           <Toaster
             position="top-center"
             toastOptions={{
-              style: {
-                background: "#08291f",
-                color: "#faf8f3",
-                border: "1px solid #0e4839",
-                borderRadius: "1rem",
-              },
+              style: { background: "#08291f", color: "#faf8f3", border: "1px solid #0e4839", borderRadius: "1rem" },
             }}
           />
         </ContactModalProvider>

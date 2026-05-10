@@ -2,6 +2,23 @@ import { Link } from "react-router-dom";
 import { Sparkles, Instagram, Twitter, Linkedin, Mail } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
 
+const Col = ({ heading, items }) => (
+  <div>
+    <h4 className="text-xs uppercase tracking-widest text-[#f59e0b] mb-4 font-mono">{heading}</h4>
+    <ul className="space-y-3 text-sm">
+      {items.map((it, i) => (
+        <li key={i}>
+          {it.action ? (
+            <button onClick={it.action} className="hover:text-[#f59e0b] transition text-left">{it.label}</button>
+          ) : (
+            <Link to={it.to} className="hover:text-[#f59e0b] transition">{it.label}</Link>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 export const Footer = () => {
   const { setOpen } = useContactModal();
   return (
@@ -9,14 +26,14 @@ export const Footer = () => {
       <div className="absolute inset-0 dot-grid opacity-30 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-5 lg:px-10 pt-20 pb-10">
         <div className="grid lg:grid-cols-12 gap-12 mb-14">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-2 mb-5">
               <div className="w-10 h-10 rounded-xl bg-[#0e4839] flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-[#f59e0b]" strokeWidth={2.5} />
               </div>
               <span className="font-display text-2xl font-bold text-[#faf8f3]">FlowDine</span>
             </div>
-            <p className="font-display text-3xl lg:text-4xl font-semibold leading-tight text-[#faf8f3] max-w-md">
+            <p className="font-display text-2xl lg:text-3xl font-semibold leading-tight text-[#faf8f3] max-w-md">
               This is not just software.<br />
               <span className="text-[#f59e0b]">This is how restaurants run.</span>
             </p>
@@ -27,31 +44,9 @@ export const Footer = () => {
             >
               Book a Demo →
             </button>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="text-xs uppercase tracking-widest text-[#f59e0b] mb-4 font-mono">Product</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link to="/" className="hover:text-[#f59e0b] transition">Features</Link></li>
-              <li><Link to="/pricing" className="hover:text-[#f59e0b] transition">Pricing</Link></li>
-              <li><button onClick={() => setOpen(true)} className="hover:text-[#f59e0b] transition">Demo</button></li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="text-xs uppercase tracking-widest text-[#f59e0b] mb-4 font-mono">Company</h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link to="/blog" className="hover:text-[#f59e0b] transition">Blog</Link></li>
-              <li><button onClick={() => setOpen(true)} className="hover:text-[#f59e0b] transition">Contact</button></li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#f59e0b] mb-4 font-mono">Stay in the loop</h4>
-            <p className="text-sm text-[#e9e3d2]/80 mb-4">Restaurant operations notes, every other Tuesday.</p>
-            <div className="flex gap-2">
+            <div className="mt-6 flex items-center gap-2 text-sm">
               <Mail className="w-4 h-4 text-[#f59e0b]" />
-              <a href="mailto:hello@flowdine.app" className="text-sm hover:text-[#f59e0b] transition">hello@flowdine.app</a>
+              <a href="mailto:hello@flowdine.app" className="hover:text-[#f59e0b] transition">hello@flowdine.app</a>
             </div>
             <div className="mt-5 flex gap-3">
               {[Instagram, Twitter, Linkedin].map((Icon, i) => (
@@ -60,6 +55,32 @@ export const Footer = () => {
                 </a>
               ))}
             </div>
+          </div>
+
+          <div className="lg:col-span-2">
+            <Col heading="Company" items={[
+              { to: "/about", label: "About" },
+              { action: () => setOpen(true), label: "Contact" },
+              { to: "/careers", label: "Careers" },
+            ]} />
+          </div>
+
+          <div className="lg:col-span-2">
+            <Col heading="Product" items={[
+              { to: "/features", label: "Features" },
+              { to: "/pricing", label: "Pricing" },
+              { to: "/blog", label: "Blog" },
+              { to: "/support", label: "Support" },
+            ]} />
+          </div>
+
+          <div className="lg:col-span-4">
+            <Col heading="Legal" items={[
+              { to: "/privacy-policy", label: "Privacy Policy" },
+              { to: "/terms-of-service", label: "Terms of Service" },
+              { to: "/refund-policy", label: "Refund Policy" },
+              { to: "/cookie-policy", label: "Cookie Policy" },
+            ]} />
           </div>
         </div>
 

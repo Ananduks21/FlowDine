@@ -6,8 +6,10 @@ import { useContactModal } from "../context/ContactModalContext";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/features", label: "Features" },
   { to: "/pricing", label: "Pricing" },
   { to: "/blog", label: "Blog" },
+  { to: "/support", label: "Support" },
 ];
 
 export const Navbar = () => {
