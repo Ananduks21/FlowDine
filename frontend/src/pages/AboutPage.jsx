@@ -24,7 +24,7 @@ const AboutPage = () => {
               Built for the Reality of <span className="text-[#0e4839]">Restaurant Operations</span>
             </h1>
             <p className="mt-7 text-lg lg:text-xl text-[#2a3e36] max-w-2xl leading-relaxed">
-              FlowDine was created to simplify the chaos restaurants face during busy hours — from ordering and kitchen coordination to billing and table management.
+              FlowDiner was created to simplify the chaos restaurants face during busy hours — from ordering and kitchen coordination to billing and table management.
             </p>
           </div>
           <div className="lg:col-span-5 relative">
@@ -125,7 +125,7 @@ const AboutPage = () => {
           <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-[#f59e0b]/15 blur-3xl" />
           <div className="relative grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] text-xs font-mono uppercase tracking-wider">Why FlowDine</span>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] text-xs font-mono uppercase tracking-wider">Why FlowDiner</span>
               <h2 className="mt-5 font-display text-4xl lg:text-5xl font-bold text-[#faf8f3] leading-tight">Why we're different.</h2>
             </div>
             <div className="lg:col-span-8 space-y-3">
@@ -161,3 +161,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+

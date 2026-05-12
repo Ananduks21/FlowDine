@@ -5,7 +5,7 @@ export const blogs = [
     excerpt: "Slow service kills tips, table turnover, and reviews. Here's the real reason it happens — and the operational fix that actually works.",
     cover: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80",
     author: "Anandu Krishnan",
-    role: "Head of Product, FlowDine",
+    role: "Head of Product, FlowDiner",
     date: "Feb 4, 2026",
     readTime: "7 min read",
     category: "Operations",
@@ -28,7 +28,7 @@ export const blogs = [
       <p>Adding people increases your wage bill without increasing throughput, because the bottleneck isn't human speed — it's information speed. The order leaves the table fast. It just doesn't <em>arrive</em> at the kitchen, the bar, and the bill all at once.</p>
 
       <h3>The fix: one system, real-time everywhere</h3>
-      <p>A modern restaurant operating system (ROS) like FlowDine collapses these gaps. The moment a guest places an order — whether on a QR menu or via a waiter — every relevant station sees it instantly: KOT prints in the kitchen, the bill is built live, the table status updates on the floor map.</p>
+      <p>A modern restaurant operating system (ROS) like FlowDiner collapses these gaps. The moment a guest places an order — whether on a QR menu or via a waiter — every relevant station sees it instantly: KOT prints in the kitchen, the bill is built live, the table status updates on the floor map.</p>
 
       <h2>What actually changes</h2>
       <ul>
@@ -48,7 +48,7 @@ export const blogs = [
     excerpt: "Pen-and-paper still works — until it doesn't. Here's a side-by-side look at where manual breaks and where digital actually pays for itself.",
     cover: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1600&q=80",
     author: "Priya Menon",
-    role: "Operations Lead, FlowDine",
+    role: "Operations Lead, FlowDiner",
     date: "Jan 28, 2026",
     readTime: "6 min read",
     category: "Comparison",
@@ -89,7 +89,7 @@ export const blogs = [
     excerpt: "There are 200+ POS and ROS platforms in the market. Here's the no-nonsense framework we recommend to every restaurant owner who asks us.",
     cover: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80",
     author: "Rohan Kapoor",
-    role: "Founder, FlowDine",
+    role: "Founder, FlowDiner",
     date: "Jan 19, 2026",
     readTime: "8 min read",
     category: "Buyer's Guide",
@@ -117,7 +117,7 @@ export const blogs = [
       <p>Internet down? Printer offline? Power fluctuation? Ask the vendor exactly what happens. Good systems queue locally and sync when back online. Bad ones lose orders.</p>
 
       <h2>Our honest recommendation</h2>
-      <p>If you're a small café (under 10 tables), a basic POS is enough. If you're a full-service restaurant with a kitchen, multiple shifts, or any reservation flow, you need a true ROS — like FlowDine. The price difference is small. The operational difference is enormous.</p>
+      <p>If you're a small café (under 10 tables), a basic POS is enough. If you're a full-service restaurant with a kitchen, multiple shifts, or any reservation flow, you need a true ROS — like FlowDiner. The price difference is small. The operational difference is enormous.</p>
     `,
     tags: ["Buyer's Guide", "Software", "Decision"]
   },
@@ -127,7 +127,7 @@ export const blogs = [
     excerpt: "Beyond \"contactless\" — QR ordering quietly changes economics, reviews, and even how much guests spend. Here's what the data actually shows.",
     cover: "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1600&q=80",
     author: "Sneha Iyer",
-    role: "Growth, FlowDine",
+    role: "Growth, FlowDiner",
     date: "Jan 11, 2026",
     readTime: "5 min read",
     category: "Growth",
@@ -175,12 +175,12 @@ export const blogs = [
     excerpt: "Most restaurant dashboards drown you in data. These six numbers — checked weekly — are enough to grow margin in any concept.",
     cover: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
     author: "Vikram Shetty",
-    role: "Analytics, FlowDine",
+    role: "Analytics, FlowDiner",
     date: "Jan 3, 2026",
     readTime: "9 min read",
     category: "Analytics",
     content: `
-      <p>Owners often tell us, "I have analytics. I just don't know what to do with them." That's because most dashboards show 40 metrics and prioritize none. Here are the six we tell every FlowDine customer to watch — weekly, religiously.</p>
+      <p>Owners often tell us, "I have analytics. I just don't know what to do with them." That's because most dashboards show 40 metrics and prioritize none. Here are the six we tell every FlowDiner customer to watch — weekly, religiously.</p>
 
       <h2>1. Cover count by daypart</h2>
       <p>Not just "how many guests today" — but how many at lunch, dinner, weekend brunch. This tells you where to push promotions and where to cut staff.</p>
@@ -204,8 +204,8 @@ export const blogs = [
       <h2>6. Revenue per available seat hour (RevPASH)</h2>
       <p>The single most important number in restaurant economics. Multiply your average check by your turnover rate, divide by available seat hours. Track it weekly. Move it monthly.</p>
 
-      <h2>How FlowDine helps</h2>
-      <p>Every metric above is on the FlowDine dashboard, live, with weekly trend lines. You don't build reports. You read them.</p>
+      <h2>How FlowDiner helps</h2>
+      <p>Every metric above is on the FlowDiner dashboard, live, with weekly trend lines. You don't build reports. You read them.</p>
       <p>The owners who grow margin in 2026 won't be the ones with the most data. They'll be the ones who watch the right six numbers — and act on them.</p>
     `,
     tags: ["Analytics", "Profit", "Dashboards"]
@@ -214,3 +214,4 @@ export const blogs = [
 
 export const getBlogBySlug = (slug) => blogs.find(b => b.slug === slug);
 export const getRelatedBlogs = (slug, count = 3) => blogs.filter(b => b.slug !== slug).slice(0, count);
+

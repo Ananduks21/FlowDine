@@ -1,9 +1,9 @@
-FlowDine — Restaurant Operating System
+FlowDiner — Restaurant Operating System
 =========================================
 
 ONE SYSTEM. COMPLETE CONTROL.
 
-FlowDine connects every part of your restaurant — orders, kitchen, billing,
+FlowDiner connects every part of your restaurant — orders, kitchen, billing,
 tables, and staff — in real time. Built for restaurants that don't have
 time for chaos.
 
@@ -58,8 +58,9 @@ Annual plans save 20%.
 BOOK A 15-MINUTE DEMO
 ──────────────────────────────────────────
 
-Visit: flowdine.app
-Email: hello@flowdine.app
+Visit: FlowDiner.app
+Email: hello@FlowDiner.app
 
 This is not just software.
 This is how restaurants run.
+

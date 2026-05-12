@@ -31,7 +31,7 @@ export const Footer = () => {
               <div className="w-10 h-10 rounded-xl bg-[#0e4839] flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-[#f59e0b]" strokeWidth={2.5} />
               </div>
-              <span className="font-display text-2xl font-bold text-[#faf8f3]">FlowDine</span>
+              <span className="font-display text-2xl font-bold text-[#faf8f3]">FlowDiner</span>
             </div>
             <p className="font-display text-2xl lg:text-3xl font-semibold leading-tight text-[#faf8f3] max-w-md">
               This is not just software.<br />
@@ -46,7 +46,7 @@ export const Footer = () => {
             </button>
             <div className="mt-6 flex items-center gap-2 text-sm">
               <Mail className="w-4 h-4 text-[#f59e0b]" />
-              <a href="mailto:hello@flowdine.app" className="hover:text-[#f59e0b] transition">hello@flowdine.app</a>
+              <a href="mailto:hello@FlowDiner.app" className="hover:text-[#f59e0b] transition">hello@FlowDiner.app</a>
             </div>
             <div className="mt-5 flex gap-3">
               {[Instagram, Twitter, Linkedin].map((Icon, i) => (
@@ -84,7 +84,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-[#e9e3d2]/10 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-[#e9e3d2]/60 font-mono">© 2026 FlowDine. Built for restaurants that don't compromise.</p>
+          <p className="text-xs text-[#e9e3d2]/60 font-mono">© 2026 FlowDiner. Built for restaurants that don't compromise.</p>
           <p className="text-xs text-[#e9e3d2]/60">Crafted with precision in India.</p>
         </div>
       </div>
@@ -93,3 +93,4 @@ export const Footer = () => {
 };
 
 export default Footer;
+

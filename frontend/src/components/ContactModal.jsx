@@ -38,7 +38,7 @@ export const ContactModal = () => {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `FlowDine demo request — ${form.restaurant || form.name}`,
+          subject: `FlowDiner demo request — ${form.restaurant || form.name}`,
           from_name: form.name,
           from_email: form.email,
           message: form.message,
@@ -89,7 +89,7 @@ export const ContactModal = () => {
                   <Sparkles className="w-3 h-3" /> 15-MIN DEMO
                 </div>
                 <DialogHeader>
-                  <DialogTitle className="font-display text-2xl sm:text-3xl font-bold text-[#faf8f3]">See FlowDine on your floor.</DialogTitle>
+                  <DialogTitle className="font-display text-2xl sm:text-3xl font-bold text-[#faf8f3]">See FlowDiner on your floor.</DialogTitle>
                   <DialogDescription className="text-[#e9e3d2]/85 mt-1">
                     Drop your details — we'll show you a live walkthrough using your menu.
                   </DialogDescription>
@@ -122,3 +122,5 @@ export const ContactModal = () => {
 };
 
 export default ContactModal;
+
+

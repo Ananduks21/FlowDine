@@ -17,7 +17,7 @@ const Pill = ({ children }) => (
 
 const cards = [
   { icon: MessageCircle, t: "WhatsApp Support", d: "Fastest channel for live operational issues during service hours.", cta: "Chat now", href: "https://wa.me/919999999999" },
-  { icon: Mail, t: "Email Support", d: "For non-urgent queries, billing questions, and feature requests.", cta: "Email us", href: "mailto:support@flowdine.app" },
+  { icon: Mail, t: "Email Support", d: "For non-urgent queries, billing questions, and feature requests.", cta: "Email us", href: "mailto:support@FlowDiner.app" },
   { icon: Calendar, t: "Demo Assistance", d: "Walkthroughs tailored to your menu, floor, and shift patterns.", cta: "Book demo", action: true },
   { icon: Wrench, t: "Setup Help", d: "Hardware setup, printer configuration, and first-night standby.", cta: "Get help", action: true },
   { icon: Users, t: "Staff Training", d: "60-minute video session that gets your full team productive.", cta: "Schedule", action: true },
@@ -27,7 +27,7 @@ const cards = [
 const faqs = [
   { q: "How do I set up QR ordering?", a: "We generate unique QR codes for every table after onboarding. Print them, paste them, and you're live. No app install required for guests." },
   { q: "Can I split bills?", a: "Yes — split by item, by guest, or by amount. Combine UPI + cash + card on a single bill in any combination." },
-  { q: "Does FlowDine support UPI?", a: "Fully. We integrate with all major UPI apps (GPay, PhonePe, Paytm, BHIM) and your existing payment gateway for cards." },
+  { q: "Does FlowDiner support UPI?", a: "Fully. We integrate with all major UPI apps (GPay, PhonePe, Paytm, BHIM) and your existing payment gateway for cards." },
   { q: "How long does onboarding take?", a: "Most restaurants are live within 48 hours including menu import, table setup, and a 60-minute team training." },
   { q: "Can staff be trained easily?", a: "Yes. Our UI is designed to onboard a new waiter in 30 minutes. We also include a video training module that's role-based." },
   { q: "Does it work on tablets?", a: "Any Android tablet (8\"+) works for waiter and kitchen apps. We can recommend exact models or include hardware as an add-on." },
@@ -156,7 +156,7 @@ const SupportPage = () => {
               <h2 className="mt-5 font-display text-3xl lg:text-4xl font-bold text-[#faf8f3] leading-tight">Send us a support request.</h2>
               <p className="mt-4 text-[#e9e3d2]/85">Real human reads every request. Most are answered within 4 hours.</p>
               <div className="mt-8 space-y-3">
-                <div className="flex items-center gap-3 text-sm text-[#e9e3d2]"><Mail className="w-4 h-4 text-[#f59e0b]" /> support@flowdine.app</div>
+                <div className="flex items-center gap-3 text-sm text-[#e9e3d2]"><Mail className="w-4 h-4 text-[#f59e0b]" /> support@FlowDiner.app</div>
                 <div className="flex items-center gap-3 text-sm text-[#e9e3d2]"><MessageCircle className="w-4 h-4 text-[#f59e0b]" /> WhatsApp +91 99999 99999</div>
               </div>
             </div>
@@ -219,3 +219,4 @@ const SupportPage = () => {
 };
 
 export default SupportPage;
+

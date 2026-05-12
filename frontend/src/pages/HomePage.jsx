@@ -344,7 +344,7 @@ const ProductGrid = () => (
       <div className="relative rounded-[2.5rem] overflow-hidden border border-[#0e4839]/10 shadow-[0_40px_80px_-30px_rgba(8,41,31,0.35)]">
         <img
           src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=2000&q=85"
-          alt="FlowDine — one platform, full control"
+          alt="FlowDiner — one platform, full control"
           className="w-full h-[320px] sm:h-[460px] lg:h-[600px] object-cover group-hover:scale-[1.02] transition-transform duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#08291f]/80 via-[#08291f]/20 to-transparent" />
@@ -408,3 +408,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

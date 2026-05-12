@@ -82,7 +82,7 @@ const FeaturesPage = () => {
               Everything Your Restaurant Needs to <span className="text-[#0e4839]">Operate Smoothly</span>
             </h1>
             <p className="mt-7 text-lg lg:text-xl text-[#2a3e36] max-w-2xl leading-relaxed">
-              From QR ordering to billing and kitchen operations — FlowDine keeps your entire restaurant connected in real time.
+              From QR ordering to billing and kitchen operations — FlowDiner keeps your entire restaurant connected in real time.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button data-testid="features-hero-demo" onClick={() => setOpen(true)} className="bg-[#0e4839] hover:bg-[#08291f] text-[#faf8f3] rounded-full px-7 h-13 py-3.5 font-semibold shadow-[0_18px_40px_-14px_rgba(14,72,57,0.55)]">Get Demo <ArrowRight className="w-4 h-4 ml-2" /></Button>
@@ -205,13 +205,13 @@ const FeaturesPage = () => {
       <Section className="py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Pill>Side by side</Pill>
-          <h2 className="mt-5 font-display text-4xl lg:text-5xl font-bold text-[#08291f] leading-tight">Traditional ops vs FlowDine</h2>
+          <h2 className="mt-5 font-display text-4xl lg:text-5xl font-bold text-[#08291f] leading-tight">Traditional ops vs FlowDiner</h2>
         </div>
         <div className="bg-white rounded-3xl border border-[#0e4839]/10 overflow-hidden">
           <div className="grid grid-cols-3 bg-[#faf8f3] border-b border-[#0e4839]/10">
             <div className="p-5 font-mono text-xs uppercase tracking-widest text-[#2a3e36]/60">Operation</div>
             <div className="p-5 font-mono text-xs uppercase tracking-widest text-[#2a3e36]/60 text-center">Traditional</div>
-            <div className="p-5 font-mono text-xs uppercase tracking-widest text-[#f59e0b] text-center bg-[#08291f]">FlowDine</div>
+            <div className="p-5 font-mono text-xs uppercase tracking-widest text-[#f59e0b] text-center bg-[#08291f]">FlowDiner</div>
           </div>
           {[
             ["Manual billing", "Paper bills, manual totals, frequent disputes", "Live bills, auto-totals, split payments"],
@@ -249,3 +249,4 @@ const FeaturesPage = () => {
 };
 
 export default FeaturesPage;
+
