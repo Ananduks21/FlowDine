@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { useContactModal } from "../context/ContactModalContext";
@@ -18,6 +18,16 @@ export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { setOpen } = useContactModal();
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = (event) => {
+    if (location.pathname === "/") {
+      event.preventDefault();
+      window.location.reload();
+    } else {
+      navigate("/");
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,7 +45,7 @@ export const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
-        <Link to="/" data-testid="logo-link" className="flex items-center gap-3 group">
+        <Link to="/" data-testid="logo-link" onClick={handleLogoClick} className="flex items-center gap-3 group">
           <div className="w-14 h-14 rounded-3xl overflow-hidden flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
             <img src={logo} alt="FlowDine logo" className="w-12 h-12 object-contain" />
           </div>

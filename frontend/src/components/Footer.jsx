@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Instagram, Twitter, Linkedin, Mail } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
 import FooterLogo from "../assets/Footerlogo.png";
@@ -22,6 +22,15 @@ const Col = ({ heading, items }) => (
 
 export const Footer = () => {
   const { setOpen } = useContactModal();
+  const location = useLocation();
+
+  const handleFooterLogoClick = (event) => {
+    if (location.pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer data-testid="site-footer" className="relative bg-[#08291f] text-[#e9e3d2] mt-24">
       <div className="absolute inset-0 dot-grid opacity-30 pointer-events-none" />
@@ -29,7 +38,9 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-12 gap-12 mb-14">
           <div className="lg:col-span-4">
             <div className="flex items-center mb-5">
-              <img src={FooterLogo} alt="FlowDine logo" className="h-14 w-auto" />
+              <Link to="/" data-testid="footer-logo-link" onClick={handleFooterLogoClick} className="inline-flex items-center">
+                <img src={FooterLogo} alt="FlowDine logo" className="h-14 w-auto" />
+              </Link>
             </div>
             <p className="font-display text-2xl lg:text-3xl font-semibold leading-tight text-[#faf8f3] max-w-md">
               This is not just software.<br />
