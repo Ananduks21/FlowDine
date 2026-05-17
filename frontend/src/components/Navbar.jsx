@@ -37,7 +37,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
         <Link to="/" data-testid="logo-link" className="flex items-center gap-3 group">
           <div className="w-14 h-14 rounded-3xl overflow-hidden flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
-            <img src={logo} alt="FlowDiner logo" className="w-12 h-12 object-contain" />
+            <img src={logo} alt="FlowDine logo" className="w-12 h-12 object-contain" />
           </div>
         </Link>
 
@@ -64,8 +64,8 @@ export const Navbar = () => {
         <div className="flex items-center gap-2">
           <a
             data-testid="navbar-brochure-btn"
-            href="/FlowDiner-Brochure.txt"
-            download="FlowDiner-Brochure.txt"
+            href="/FlowDine-Brochure.txt"
+            download="FlowDine-Brochure.txt"
             className="hidden lg:inline-flex items-center gap-2 border border-[#0e4839]/20 hover:border-[#0e4839] hover:bg-[#0e4839]/5 text-[#08291f] rounded-full px-5 h-10 text-sm font-semibold transition-all"
           >
             <Download className="w-4 h-4" /> Brochure
@@ -107,8 +107,8 @@ export const Navbar = () => {
             ))}
             <a
               data-testid="mobile-brochure-btn"
-              href="/FlowDiner-Brochure.txt"
-              download="FlowDiner-Brochure.txt"
+              href="/FlowDine-Brochure.txt"
+              download="FlowDine-Brochure.txt"
               className="mt-2 inline-flex items-center justify-center gap-2 border border-[#0e4839]/25 text-[#08291f] rounded-full h-12 font-semibold"
             >
               <Download className="w-4 h-4" /> Download Brochure

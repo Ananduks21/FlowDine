@@ -159,7 +159,7 @@ const PricingPage = () => {
                   a: "Most restaurants are live within 48 hours. We import your menu, configure tables, train your staff over a 60-minute video session, and stay on standby for the first weekend.",
                 },
                 {
-                  q: "Does FlowDiner work without internet?",
+                  q: "Does FlowDine work without internet?",
                   a: "Yes. The waiter and kitchen apps queue orders locally and sync the moment connectivity returns. You will never lose an order to a network drop.",
                 },
                 {

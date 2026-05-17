@@ -8,7 +8,7 @@ const BlogPage = () => {
     <main data-testid="blog-page" className="pt-32 lg:pt-40 pb-24">
       <div className="max-w-7xl mx-auto px-5 lg:px-10">
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0e4839]/8 text-[#0e4839] text-xs font-mono uppercase tracking-wider">FlowDiner Journal</span>
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0e4839]/8 text-[#0e4839] text-xs font-mono uppercase tracking-wider">FlowDine Journal</span>
           <h1 className="mt-5 font-display text-5xl lg:text-6xl font-bold text-[#08291f] leading-[1.05]">Notes from the floor.</h1>
           <p className="mt-5 text-lg text-[#2a3e36]/85 max-w-2xl">Honest, no-fluff writing on restaurant operations, growth, and the small details that compound into great service.</p>
         </div>

@@ -15,13 +15,13 @@ const BlogDetailPage = () => {
 
   useEffect(() => {
     if (blog) {
-      document.title = `${blog.title} · FlowDiner`;
+      document.title = `${blog.title} · FlowDine`;
       const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
       meta.name = "description";
       meta.content = blog.excerpt;
       if (!meta.parentNode) document.head.appendChild(meta);
     }
-    return () => { document.title = "FlowDiner — Run Your Entire Restaurant From One System"; };
+    return () => { document.title = "FlowDine — Run Your Entire Restaurant From One System"; };
   }, [blog]);
 
   if (!blog) return <NotFoundPage />;
@@ -102,7 +102,7 @@ const BlogDetailPage = () => {
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#f59e0b]/15 rounded-full blur-3xl" />
           <div className="relative">
             <h3 className="font-display text-3xl lg:text-5xl font-bold text-[#faf8f3] leading-tight">Ready to run your restaurant differently?</h3>
-            <p className="mt-5 text-[#e9e3d2]/85 text-lg max-w-xl mx-auto">See FlowDiner on a 15-minute live demo with your own menu.</p>
+            <p className="mt-5 text-[#e9e3d2]/85 text-lg max-w-xl mx-auto">See FlowDine on a 15-minute live demo with your own menu.</p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <Button data-testid="blog-demo-btn" onClick={() => setOpen(true)} className="bg-[#f59e0b] hover:bg-[#fbbf24] text-[#08291f] rounded-full px-7 h-13 py-3.5 font-bold">Book a Demo →</Button>
               <Button data-testid="blog-pricing-btn" onClick={() => navigate("/pricing")} variant="outline" className="border-2 border-[#faf8f3]/30 hover:border-[#faf8f3] hover:bg-[#faf8f3]/10 text-[#faf8f3] rounded-full px-7 h-13 py-3.5 font-semibold bg-transparent">View Pricing</Button>
