@@ -46,7 +46,7 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
         <Link to="/" data-testid="logo-link" onClick={handleLogoClick} className="flex items-center gap-3 group">
-          <div className="w-14 h-14 rounded-3xl overflow-hidden flex items-center justify-center group-hover:rotate-6 transition-transform duration-300">
+          <div className="w-14 h-14 rounded-3xl overflow-hidden flex items-center justify-center">
             <img src={logo} alt="FlowDine logo" className="w-12 h-12 object-contain" />
           </div>
         </Link>

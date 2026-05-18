@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Clock } from "lucide-react";
-import { blogs } from "../data/blogs";
+import { sortedBlogs as blogs } from "../data/blogs";
 
 const BlogPage = () => {
   const [featured, ...rest] = blogs;
